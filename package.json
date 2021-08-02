@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/strapi": "^0.3.1",
     "core-js": "^3.15.1",
+    "netlify-cli": "^5.4.3",
     "nuxt": "^2.15.7",
     "nuxt-property-decorator": "^2.9.1",
     "vue-class-component": "^7.2.6"
