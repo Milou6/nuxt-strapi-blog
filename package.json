@@ -11,8 +11,10 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/strapi": "^0.3.1",
     "core-js": "^3.15.1",
+    "markdown-it-highlightjs": "^3.5.0",
     "netlify-cli": "^5.4.3",
     "nuxt": "^2.15.7",
     "nuxt-property-decorator": "^2.9.1",

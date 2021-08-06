@@ -1,8 +1,26 @@
 <template>
-  <div class="container">
+  <div class="container w-full flex flex-col content-center">
     <div v-if="error">
       <h2>Couldn't fetch articles from server</h2>
       {{ error }}
+    </div>
+    <div
+      v-else-if="articles.length == 0"
+      class="
+        loader
+        w-11/12
+        flex
+        justify-center
+        shadow-2xl
+        border border-gray-300
+        rounded-xl
+        m-8
+        mt-0
+        p-4
+        h-screen
+      "
+    >
+      🧭 Loading Articles ...
     </div>
     <ul v-else>
       <li v-for="article in articles" :key="article.id">
@@ -20,45 +38,19 @@ export default class ArticlesListing extends Vue {
   articles = []
   error = null
 
-  // async fetch() {
-  //   this.articles = await fetch('http://localhost:1337/articles').then((res) =>
-  //     res.json()
-  //   )
-  //   console.log('async fetch')
-  // }
-  async mounted() {
-    // await fetch('http://localhost:1337/articles')
-    await fetch('https://strapi-emile-blog.herokuapp.com/articles')
+  async mounted(URL: string = this.$config.baseURL) {
+    // await fetch('https://strapi-emile-blog.herokuapp.com/articles')
+    await fetch(`${URL}/articles`)
       .then((res) => res.json())
       .then((res) => {
         this.articles = res
       })
-    console.log('async fetch')
   }
 }
-
-// export default {
-//   name: 'ArticlesListing',
-//   data() {
-//     return {
-//       articles: {
-//         type: Array,
-//         default: [],
-//       },
-//       error: null,
-//     }
-//   },
-//   async fetch() {
-//     this.articles = await fetch('http://localhost:1337/articles').then((res) =>
-//       res.json()
-//     )
-//   },
-//   // async mounted() {
-//   //   try {
-//   //     this.articles = await this.$strapi.$articles.find()
-//   //   } catch (error) {
-//   //     this.error = error
-//   //   }
-//   // },
-// }
 </script>
+
+<style scoped>
+.loader {
+  /* background-color: hsl(227, 27%, 23%); */
+}
+</style>

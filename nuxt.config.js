@@ -18,7 +18,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '~/assets/css/main.css',
+    {
+      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
+      lang: 'css',
+    },
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -35,12 +41,29 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/strapi'],
+  modules: ['@nuxtjs/strapi', '@nuxtjs/markdownit'],
   strapi: {
     entities: ['restaurants', 'categories', 'articles'],
-    url: 'http://localhost:1337',
+    // url: 'http://localhost:1337',
+    url: 'https://strapi-emile-blog.herokuapp.com',
+  },
+  // [optional] markdownit options
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    // use: ['markdown-it-div', 'markdown-it-attrs'],
+    runtime: true, // Support `$md()`
+    injected: true,
+    use: ['markdown-it-highlightjs'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  publicRuntimeConfig: {
+    // baseURL: 'http://localhost:1337',
+    baseURL: 'https://strapi-emile-blog.herokuapp.com',
+  },
 }

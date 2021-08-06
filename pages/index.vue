@@ -1,14 +1,20 @@
 <template>
   <div>
-    <h1 class="mb-32 text-4xl font-bold">Bloggo</h1>
-    <ArticlesListing />
+    <TheHeader :showingTitle="true" />
+    <div class="flex">
+      <ArticlesListing />
+      <aside class="w-[20vw] bg-gray-100"></aside>
+    </div>
+    <TheFooter />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  // layout: 'binchLayout',
+})
 </script>
 
 <style scoped></style>
