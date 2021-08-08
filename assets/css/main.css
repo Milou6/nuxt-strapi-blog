@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Special+Elite&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Special+Elite&display=swap'); */
 
+/*
+*/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
+/* @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap'); */
+html {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 58%,
+    rgba(207, 207, 207, 1) 100%
+  );
+}
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */
 /* Palette URL: http://paletton.com/#uid=2320u0kFccSvg88DJ9VBOjtEyqu */

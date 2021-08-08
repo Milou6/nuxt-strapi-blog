@@ -24,11 +24,11 @@
         alt="article image"
       />
 
-      <h3 class="article-title text-2xl text-primary-light">
+      <h3 class="article-title font-salsa text-2xl text-primary-light">
         {{ data.title }}
       </h3>
 
-      <p class="article-text mt-2 text-base">
+      <p class="article-text font-ibmmono mt-2 text-base">
         {{ data.content.substring(0, 400) + '...' }}
       </p>
     </div>
@@ -57,12 +57,12 @@ export default {
   /* background-color: hsl(227, 27%, 23%); */
 }
 .article:hover {
-  box-shadow: inset 0px 0px 10px 1px rgb(112, 112, 112);
+  box-shadow: inset 0px 0px 5px 1px rgb(209, 209, 209);
 }
 
 .article-title {
   /* font-family: 'IBM Plex Mono', monospace; */
-  font-family: 'Salsa', cursive;
+  /* font-family: 'Salsa', cursive; */
 }
 .article-text {
   font-family: 'Roboto', sans-serif;

@@ -13,25 +13,38 @@
         p-6
         py-32
         border-t-0
+        bg-white
       "
     >
       <div v-if="!post.content" class="mx-auto">🧭 Loading Article ...</div>
 
       <div v-else>
-        <h1 class="article-title text-5xl pb-8 text-primary-dark font-bold">
+        <h1
+          class="
+            article-title
+            font-ibmmono
+            text-5xl
+            mb-0
+            text-primary-dark
+            font-bold
+          "
+        >
           {{ post.title }}
         </h1>
+        <span v-if="post.published_at">{{
+          post.published_at.slice(0, 10)
+        }}</span>
 
         <img
           v-if="post.coverImage"
           :src="`${post.coverImage.url}`"
           alt="article image"
-          class="article-image w-1/2 mx-auto object-contain pb-8"
+          class="article-image w-1/2 mx-auto mt-8 object-contain pb-8"
         />
 
         <p
           v-if="post.content"
-          class="article-content text-base"
+          class="article-content font-roboto text-base"
           v-html="$md.render(post.content)"
         ></p>
 
@@ -47,7 +60,7 @@
             font-bold
             bg-white
             border-2 border-primary-light border-double
-            hover:border-solid hover:bg-green-100
+            hover:border-solid hover:text-primary-light
             rounded-lg
           "
           >Back 🏕</NuxtLink
@@ -129,15 +142,16 @@ export default class slug extends Vue {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
   /* font-size: 2.5rem; */
-  margin: 1rem auto;
 }
 * >>> h2 {
   font-size: 2.62rem;
   color: #004727;
+  margin: 1rem auto;
 }
 * >>> h3 {
   font-weight: 400;
   font-size: 1.62rem;
+  margin: 1rem auto;
   color: #009250;
 }
 * >>> pre {

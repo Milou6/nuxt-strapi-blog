@@ -17,6 +17,12 @@ module.exports = {
           dark: '#012D19',
         },
       },
+      fontFamily: {
+        salsa: "'Salsa', cursive",
+        roboto: "'Roboto', sans-serif",
+        ibmmono: "'IBM Mono', monospace",
+        mosaic: "'Palette Mosaic', cursive",
+      },
     },
   },
   variants: {

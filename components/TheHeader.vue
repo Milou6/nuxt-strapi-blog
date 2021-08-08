@@ -6,6 +6,7 @@
         src="~/assets/header-video.mp4"
         alt="pine forest header video"
         type="video/mp4"
+        autoplay
         muted
         loop
       ></video>
@@ -16,7 +17,14 @@
 
     <h1
       v-if="showingTitle"
-      class="header-title h-[30vh] mx-auto text-6xl text-primary mt-6"
+      class="
+        header-title
+        h-[30vh]
+        mx-auto
+        font-salsa
+        text-6xl text-primary
+        mt-6
+      "
     >
       Stuff I find interesting
     </h1>
@@ -38,6 +46,7 @@ export default class TheHeader extends Vue {
   /* font-family: 'Special Elite', cursive; */
   /* font-family: 'Love Ya Like A Sister', cursive; */
   /* font-family: 'IBM Plex Mono', monospace; */
-  font-family: 'Salsa', cursive;
+  /* font-family: 'Salsa', cursive; */
+  /* font-family: 'Palette Mosaic', cursive; */
 }
 </style>
